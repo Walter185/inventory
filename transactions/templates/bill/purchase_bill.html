@@ -7,7 +7,7 @@
 
 {% block content %}
 
-    <div style="color:#ea2088; font-style: bold; font-size: 3rem;  border-bottom: 1px solid white;">Purchase Bill No : {{ bill.billno }}</div>
+    <div style="color:#25007a; font-style: bold; font-size: 3rem;  border-bottom: 1px solid white;">Purchase Bill No : {{ bill.billno }}</div>
 
     <br><br>
     
@@ -82,7 +82,8 @@
                                 <tbody>
                                     <tr>
                                         <td class="inner-box" style="width: 05%; font-weight: bold; text-align: center;">&nbsp;SL NO</td>
-                                        <td class="inner-box" style="width: 30%; font-weight: bold; text-align: center;">DESCRIPTION OF THE GOODS</td>
+                                        <td class="inner-box" style="width: 10%; font-weight: bold; text-align: center;">DESCRIPTION OF CODES</td>
+                                        <td class="inner-box" style="width: 20%; font-weight: bold; text-align: center;">DESCRIPTION OF THE GOODS</td>
                                         <td class="inner-box" style="width: 12%; font-weight: bold; text-align: center;">&nbsp;HSN/SAC</td>
                                         <td class="inner-box" style="width: 12%; font-weight: bold; text-align: center;">QTY MTS</td>
                                         <td class="inner-box" style="width: 12%; font-weight: bold; text-align: center;">RATE PMT</td>
@@ -92,7 +93,8 @@
                                     {% for item in items %}
                                         <tr style="height: auto;">
                                             <td class="inner-box" style="width: 5%;">&nbsp; {{ forloop.counter }}</td>
-                                            <td class="inner-box" style="width: 30%;">&nbsp; {{ item.stock.name }}</td>
+                                            <td class="inner-box" style="width: 10%;">&nbsp; {{ item.stock.code }}</td>
+                                            <td class="inner-box" style="width: 20%;">&nbsp; {{ item.stock.name }}</td>
                                             <td class="inner-box" style="width: 12%;">&nbsp;</td>
                                             <td class="inner-box" style="width: 12%;">&nbsp; {{ item.quantity }}</td>
                                             <td class="inner-box" style="width: 12%;">&nbsp; {{ item.perprice }}</td>

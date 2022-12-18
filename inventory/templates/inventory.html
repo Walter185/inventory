@@ -8,10 +8,10 @@
 
 {% block content %}
     
-    <div class="row" style="color: #ea2088; font-style: bold; font-size: 3rem; ">
-        <div class="col-md-8">Inventory List</div>
+    <div class="row" style="font-style: bold; font-size: 3rem; ">
+        <div class="col-md-8">Inventario General</div>
         <div class="col-md-4">               
-            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-stock' %}">Add New Stock</a> </div>
+            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-stock' %}">Agregar Nuevo Producto</a> </div>
         </div>
     </div>
     
@@ -23,9 +23,9 @@
 
         <form method="get">
             <div class="input-group search">
-                {% render_field filter.form.name class="form-control textinput" placeholder="Search by stock name" %}
+                {% render_field filter.form.name class="form-control textinput" placeholder="Buscar por nombre de Producto" %}
                 <div class="input-group-append">
-                   <button type="submit" class="btn btn-pink"> Search </button>
+                   <button type="submit" class="btn btn-pink"> Buscar </button>
                 </div>
             </div>
         </form>
@@ -34,7 +34,8 @@
         
         <thead class="thead-inverse align-middle">
             <tr>
-                <th width="50%">Stock Name</th>
+                <th width="25%">Stock Code</th>
+                <th width="25%">Stock Name</th>
                 <th width="20%">Current Stock in Inventory</th>
                 <th width="30%">Options</th>
             </tr>
@@ -46,7 +47,8 @@
             {% for stock in object_list %}
                 <tr>
                     <td>
-                        <h4>{{ stock.name }}</h4>
+                        <h5>{{ stock.code }}</h5>
+                        <h5>{{ stock.name }}</h5>
                     </td>
                     <td class="align-middle">{{ stock.quantity }}</td>
                     <td class="align-middle">
@@ -89,7 +91,7 @@
     </table>
 
     <br><br><br><br><br><br><br><br>
-    <div style="color: #ea2088; font-style: bold; font-size: 1.5rem; text-align: center;">WOW, SUCH EMPTY</div>
+    <div style="color: #25007a; font-style: bold; font-size: 1.5rem; text-align: center;">WOW, SUCH EMPTY</div>
 
 {% endif %}
 
