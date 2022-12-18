@@ -14,21 +14,33 @@
     
         {% csrf_token %}
         {{ form.non_field_errors }}
+    
         <div class="form-group">
             {{ form.name.errors }}
-            <label for="{{ form.name.id_for_label }}">Code:</label>
-            {{ form.code }}
-        </div>  
-        <div class="form-group">
-            {{ form.name.errors }}
-            <label for="{{ form.name.id_for_label }}">Name:</label>
+            <label for="{{ form.name.id_for_label }}">Código:</label>
             {{ form.name }}
         </div>
+        <div class="form-group">
+            {{ form.descripcion.errors }}
+            <label for="{{ form.descripcion.id_for_label }}">Descripcion:</label>
+            {{ form.descripcion }}
+        </div>  
+        
         <div class="form-group ">
             {{ form.quantity.errors }}
             <label for="{{ form.quantity.id_for_label }}">Quantity:</label>
             {{ form.quantity }}
         </div>
+        <div class="form-group">
+            {{ form.ubicacion.errors }}
+            <label for="{{ form.ubicacion.id_for_label }}">Ubicación:</label>
+            {{ form.ubicacion }}
+        </div>  
+        <div class="form-group">
+            {{ form.precio.errors }}
+            <label for="{{ form.precio.id_for_label }}">Precio:</label>
+            {{ form.precio }}
+        </div>  
 
         <br>
 

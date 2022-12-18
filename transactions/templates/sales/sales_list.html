@@ -9,9 +9,9 @@
 {% block content %}
     
     <div class="row" style="color: #25007a; font-style: bold; font-size: 3rem;">
-        <div class="col-md-8">Sales List</div>
+        <div class="col-md-8">Listado de Ventas</div>
         <div class="col-md-4">               
-            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-sale' %}">New Outgoing Stock</a> </div>
+            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-sale' %}">Nueva Salida del Stock</a> </div>
         </div>
     </div>
     
@@ -21,13 +21,13 @@
             
         <thead class="thead-inverse align-middle">
             <tr>
-                <th width="10%">Bill No</th>
-                <th width="15%">Customer</th>
-                <th width="15%">Stocks Sold</th>
-                <th width="10%">Quantity Sold</th>
-                <th width="10%">Total Sold Price</th>
-                <th width="15%">Sale Date</th>
-                <th width="25%">Options</th>
+                <th width="10%">Factura N°</th>
+                <th width="15%">Cliente</th>
+                <th width="15%">Stocks Vendido</th>
+                <th width="10%">Cantidad Vendida</th>
+                <th width="10%">Total Precio Vendido</th>
+                <th width="15%">Fecha de Venta</th>
+                <th width="25%">Opciones</th>
             </tr>
         </thead>
 
@@ -42,7 +42,8 @@
                 <td class="align-middle">{% for item in sale.get_items_list %} {{ item.quantity }} <br> {% endfor %}</td>     
                 <td class="align-middle">{{ sale.get_total_price }}</td>
                 <td class="align-middle">{{ sale.time.date }}</td>
-                <td class="align-middle"> <a href="{% url 'sale-bill' sale.billno %}" class="btn ghost-pink">View Bill</a> <a href="{% url 'delete-sale' sale.pk %}" class="btn ghost-red">Delete Bill</a> </td>
+                <td class="align-middle"> <a href="{% url 'sale-bill' sale.billno %}" class="btn ghost-pink">Ver</a> 
+                    <a href="{% url 'delete-sale' sale.pk %}" class="btn ghost-red">Borrar</a> </td>
             </tr>
             {% endfor %}
         </tbody>

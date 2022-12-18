@@ -34,9 +34,11 @@
         
         <thead class="thead-inverse align-middle">
             <tr>
-                <th width="15%">Código</th>
+                <th width="5%">Código</th>
                 <th width="35%">Descripción</th>
-                <th width="20%">Stock</th>
+                <th width="10%">Stock</th>
+                <th width="10%">Ubicación</th>
+                <th width="10%">Precio</th>
                 <th width="30%">Opciones</th>
             </tr>
         </thead>
@@ -46,9 +48,11 @@
         <tbody>         
             {% for stock in object_list %}
                 <tr>
-                    <td><h5>{{ stock.code }}</h5></td>
                     <td><h5>{{ stock.name }}</h5></td>
+                    <td><h5>{{ stock.descripcion }}</h5></td>
                     <td class="align-middle">{{ stock.quantity }}</td>
+                    <td class="align-middle">{{ stock.ubicacion }}</td>
+                    <td class="align-middle">{{ stock.precio }}</td>
                     <td class="align-middle">
                         <a href="{% url 'edit-stock' stock.pk %}" class="btn ghost-button">Editar</a>
                         <a href="{% url 'delete-stock' stock.pk %}" class="btn ghost-red"> Borrar</a>
