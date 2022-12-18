@@ -5,7 +5,7 @@ from inventory.models import Stock
 class Supplier(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=150)
-    phone = models.CharField(max_length=12, unique=True)
+    phone = models.CharField(max_length=15, unique=True)
     address = models.CharField(max_length=200)
     email = models.EmailField(max_length=254, unique=True)
     gstin = models.CharField(max_length=15, unique=True)
@@ -71,7 +71,7 @@ class SaleBill(models.Model):
     time = models.DateTimeField(auto_now=True)
 
     name = models.CharField(max_length=150)
-    phone = models.CharField(max_length=12)
+    phone = models.CharField(max_length=15)
     address = models.CharField(max_length=200)
     email = models.EmailField(max_length=254)
     gstin = models.CharField(max_length=15)

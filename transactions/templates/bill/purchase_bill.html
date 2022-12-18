@@ -24,14 +24,14 @@
                     <tbody>
                         
                         <tr style="height: 1px;">
-                            <td> <p style="text-align: center;">TAX INVOICE - PURCHASE</p> </td>
+                            <td> <p style="text-align: center;">TAX INVOICE - VENTA</p> </td>
                         </tr>
                         
                         <tr style="text-align: center;">
                             <td >
-                                <span style="font-size: 350%;">Company</span> <br>
-                                <span style="font-size: 120%; font-weight: bold; text-decoration: underline;">DEALERS IN : Products</span> <br>
-                                <span style="text-decoration: underline; font-weight: bold;">REGD ADDRESS :</span> Address Line 1<br>Address line 2<br>
+                                <span style="font-size: 350%;">Compañia</span> <br>
+                                <span style="font-size: 120%; font-weight: bold; text-decoration: underline;">DEALERS IN : Productos</span> <br>
+                                <span style="text-decoration: underline; font-weight: bold;">REGD ADDRESS :</span> Dirección Linea 1<br>Dirección Linea 2<br>
                                 <span style="text-decoration: underline; font-weight: bold;">EMAIL : email</span> <br><br>
                             </td>
                         </tr>
@@ -41,7 +41,7 @@
                             <table class="outer-box" style="width: 800px; margin-left: auto; margin-right: auto;">
                                 <tbody>
                                     <tr>
-                                        <td class="inner-box" style="text-align: center; font-weight: bold;" colspan="3">GSTIN NO - 123456789ABCDEF</td>
+                                        <td class="inner-box" style="text-align: center; font-weight: bold;" colspan="3">RUT/CI: 123456789ABCDEF</td>
                                     </tr>
                                     <tr>
                                         <td class="inner-box" style="width: 50%; font-weight: bold;">&nbsp;NAME OF CONSIGNEE / BUYER</td>
@@ -67,7 +67,7 @@
                                         <td class="inner-box align-middle" style="width: 25%;"> <input type="text" name="destination" class="align-middle" style="border: 0; overflow: hidden;" value="{% if billdetails.destination %}{{ billdetails.destination }}{% endif %}"> </td>
                                     </tr>
                                     <tr>
-                                        <td class="inner-box" style="font-weight: bold;">&nbsp;GSTIN No : {{ bill.supplier.gstin }}</td>
+                                        <td class="inner-box" style="font-weight: bold;">&nbsp;RUT/CI No : {{ bill.supplier.gstin }}</td>
                                         <td class="inner-box" style="width: 25%; font-weight: bold;">&nbsp;PO NO &amp; DATE</td>
                                         <td class="inner-box align-middle" style="width: 25%;"> <input type="text" name="po" class="align-middle" style="border: 0; overflow: hidden;" value="{% if billdetails.po %}{{ billdetails.po }}{% endif %}"> </td>
                                     </tr>
@@ -113,7 +113,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="inner-box" style="width: 35%; text-align: center;" rowspan="6">
-                                            <p> <span style="font-weight: bold;">BANK DETAILS <br> company</span> <br>
+                                            <p> <span style="font-weight: bold;">Numero de Cuenta Bancaria <br> company</span> <br>
                                                 bank name <br> AC NO-000 000 000 000 000 <br> IFSC CODE - ABCD 000 0000 <br> BRANCH <br> PH NO - 0123456789</p>
                                         </td>
                                         <td class="inner-box" style="width: 30%; font-weight: bold;">&nbsp;CGST @ 2.5%</td>
